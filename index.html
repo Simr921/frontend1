@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Pizza Restaurent</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quattrocento&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/fd52fe3ae0.js" crossorigin="anonymous"></script>
+<style>
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{background-color:black;
+    color:white; 
+}
+.heading{font-family: 'Quattrocento', serif;text-align:center;text-transform: uppercase;}
+.container {
+  font-family: sans-serif;
+  /*width: 100vw;*/
+  /*height: 100vh;*/
+  
+}
+
+.header-container {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+.logo {
+  font-family: 'Quattrocento', serif;
+}
+
+.menu-active {
+  display: flex;
+  align-items: cneter;
+  justify-contet: space-between;
+  display: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item a {
+  border-radius: 5px;
+  text-decoration: none;
+  padding: 1rem;
+  transition: 0.25s;
+  color:white;
+}
+
+.nav-item a:hover {
+  background-color: #8df;
+}
+
+.user-options {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.option {
+  padding: 1rem;
+}
+
+.option:hover {
+  cursor: pointer;
+  color: blue;
+}
+
+.menu {
+  display: none;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+  .header-container {
+  }
+  .navbar,
+  .user-options {
+    display: none;
+  }
+  .menu {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .newsletter {
+    flex-direction: column;
+  }
+  .newsletter span:before {
+    content: 'Join Our ';
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .header-container {
+    margin: 0 6rem;
+  }
+}
+
+section{
+    padding:5rem 2%;
+}
+.home{display: flex ;
+    align-items:center;
+    height:590px;
+    background:url(https://source.unsplash.com/MQUqbmszGGM) no-repeat;
+    background-size :cover;
+    background-position:center;
+}
+.home .content{max-width:50rem;}
+.home .content h3{font-size:5rem;font-family: 'Quattrocento', serif;}
+.home .content p{font-size:1.5rem;
+    padding:1rem 0;
+    line-height:1.5;
+}
+
+/*about us*/
+.about{
+     
+    display:flex;
+
+   
+ margin: auto;
+  width: 80vw;
+    flex-direction: row;
+    align-items:center;
+    /*justify-content: space-between;*/
+}
+.about img{ width: 100%;
+  max-width: 400px;
+  height: auto;}
+  .about .par{margin:0 9rem;}
+ .about p
+ {
+    
+ 
+     line-height:1.5;
+ }
+ @media only screen and (max-width: 968px) {
+  .about {flex-direction :column;font-size:14px;}
+   .f-im {flex-direction :column;}
+} 
+
+/*  menu items*/
+.menu-itm{
+  
+ margin: auto;
+  width: 80vw;
+}
+
+footer{
+  margin-top:90px;
+  bottom:0;
+  height:auto;
+
+  padding:2rem 1rem;
+ width:100%;
+}
+.f-im{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;}
+.right{
+  width:210px;
+  display:flex;
+  flex-direction:row;
+justify-content:space-between;
+}
+footer img{
+  height:200px;
+  width:200px;
+}
+footer .mail{
+  padding-top:20px;
+}
+</style>
+</head>
+<body>
+
+  <div class="container">
+  <header class="header-container">
+    <div class="logo">
+      Pizza Restaurent
+    </div>
+    <div class="menu-active">
+      <nav class="navbar">
+        <div class="nav-item"><a href="#">Menu</a></div>
+        <div class="nav-item"><a href="#">About</a></div>
+        <div class="nav-item"><a href="#">Contact</a></div>
+        <div class="nav-item"><a href="#">Blog</a></div>
+         <div class="nav-item"><a href="#">Testimony</a></div>
+         <div class="nav-item"><a href="#">Our Team</a></div>
+      </nav>
+      <div class="user-options">
+        <div class="option"><i class="fa fa-moon"></i></div>
+        <div class="option"><i class="fa fa-user"></i></div>
+        <div class="option"><i class="fa fa-gear"></i></div>
+      </div>
+    </div>
+    <nav class="navbar">
+      <div class="nav-item"><a href="#">Home</a></div>
+      <div class="nav-item"><a href="#">About</a></div>
+      <div class="nav-item"><a href="#">Contact</a></div>
+      <div class="nav-item"><a href="#">Blog</a></div>
+    </nav>
+    <div class="user-options">
+      <div class="option"><i class="fa fa-moon"></i></div>
+      <div class="option"><i class="fa fa-user"></i></div>
+      <div class="option"><i class="fa fa-gear"></i></div>
+    </div>
+    <div class="menu" onclick="activeMenu()">
+      <i class="fa fa-bars"></i>
+    </div>
+  </header>
+  
+  <hr>
+  
+  <!--home section-->
+  <section class="home" id="sect">
+      <div class="content">
+          <h3>Craving for a cheesy pizza?</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
+  </section><br><br>
+
+<h2 class="heading">About us</h2><br><br>
+    <div class="about">
+    
+     <div class="par">
+    <p>Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Sit amet mattis vulputate enim nulla aliquet porttitor. Massa sapien faucibus et molestie ac feugiat sed lectus. Vitae ultricies leo integer malesuada. Amet est placerat in egestas. Leo duis ut diam quam nulla. Condimentum vitae sapien pellentesque habitant. Dolor morbi non arcu risus quis varius. Tempor nec feugiat nisl pretium fusce id. Pharetra convallis posuere morbi leo urna. </p></div> 
+    <img src="https://source.unsplash.com/WlMaIRoh7j8" >
+    </div><br><br>
+  
+<h2 class="heading">Menu</h2><br><br>
+<section class="menu-itm">
+<p>Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Sit amet mattis vulputate enim nulla aliquet porttitor. Massa sapien faucibus et molestie ac feugiat sed lectus. Vitae ultricies leo integer malesuada. Amet est placerat in egestas. Leo duis ut diam quam nulla. Condimentum vitae sapien pellentesque habitant. Dolor morbi non arcu risus quis varius. Tempor nec feugiat nisl pretium fusce id. Pharetra convallis posuere morbi leo urna. </p><br><br>
+<div class="card-row">
+<!--     <div class="card-body">
+        <img src="https://source.unsplash.com/WlMaIRoh7j8">
+      <div class="card-p">
+        <h4>Lectus arcu</h4>
+        <p>Lectus arcu bibendum at varius vel pharetra vel turpis nunc. Sit amet</p></div> -->
+    </div>
+ 
+</div>
+
+</section>
+
+
+
+</div>
+<footer>
+  <div class="f-im">
+    <div class="left"><img src="https://static.vecteezy.com/system/resources/previews/011/992/717/original/illustration-logo-design-chef-mascot-serving-with-a-smile-free-vector.jpg"></div>
+    <div class="right">
+       <div class="icon">
+     <div class="option"><i class="fa fa-envelope"></i></div>
+         <div class="option"><i class="fa fa-phone-volume"></i></div>
+    </div>
+      <div class="mail">
+      <ul> 
+        <li>mailid@gmail.com</li>
+         <li>123-456-789</li>
+         <li>123-456-789</li>
+        </ul>
+    </div>
+    </div>
+    <div>
+</footer>
+</body>
+</html>
